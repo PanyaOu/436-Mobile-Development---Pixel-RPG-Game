@@ -4,25 +4,28 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    // Start is called before the first frame update
     public GameObject bulletPrefab;
     public Transform firePoint;
+    private bool canFire = true; // Flag to control the firing
 
-    public void Fire(){
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-    }
-
-    public void OnButtonPressed(){
-        Fire();
-    }
+    public float fireForce = 20f;
 
     void Start()
     {
-        
+        InvokeRepeating("Fire", 1f, 1f); // Fire method will be called every 1 second
     }
 
-    // Update is called once per frame
+    public void Fire()
+    {
+        if (canFire)
+        {
+            GameObject projectile = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            projectile.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
+        }
+    }
+
     void Update()
     {
+        // Use canFire flag to control the firing
     }
 }
