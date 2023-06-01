@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -34,6 +35,16 @@ public class PlayerController : MonoBehaviour
             Vector2 aimDirection = new Vector2(weaponJoystick.joystickVector.x, weaponJoystick.joystickVector.y);
             float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
             rb.rotation = aimAngle;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        // If the player collided with an enemy
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            // Load the game over scene
+            SceneManager.LoadScene("Game Over");
         }
     }
 

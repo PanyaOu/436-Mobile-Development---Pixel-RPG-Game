@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public Rigidbody2D rb;
-    void onTriggerEnter2D(Collider2D other)
+    public float speed = 20f;
+
+    void Update()
+    {
+        transform.Translate(transform.forward * speed * Time.deltaTime, Space.World);
+    }
+
+    void onCollisionEnter2D(Collision2D other)
     {
         switch(other.gameObject.tag)
         {
@@ -14,10 +19,6 @@ public class Bullet : MonoBehaviour
                 Destroy(other.gameObject);
                 Destroy(gameObject);
                 break;
-            case "Obstacle":
-                Destroy(gameObject);
-                break;
         }
     }
-
 }

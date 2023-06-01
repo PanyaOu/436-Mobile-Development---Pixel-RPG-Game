@@ -28,4 +28,15 @@ public class Weapon : MonoBehaviour
     {
         // Use canFire flag to control the firing
     }
+
+    void onCollisionEnter2D(Collision2D other)
+    {
+        switch(other.gameObject.tag)
+        {
+            case "Enemy":
+                Destroy(other.gameObject);
+                Destroy(gameObject);
+                break;
+        }
+    }
 }

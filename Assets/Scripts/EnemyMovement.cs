@@ -28,4 +28,7 @@ public class EnemyMovement : MonoBehaviour
         // Apply a force in the direction of the player
         rb.AddForce(direction * speed);
     }
+
+
+
 }
