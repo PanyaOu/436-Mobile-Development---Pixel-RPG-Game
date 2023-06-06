@@ -1,19 +1,20 @@
 using UnityEngine;
 using TMPro; // Required for TextMeshPro
-
 public class ScoreDisplay : MonoBehaviour
 {
     public TextMeshProUGUI scoreText; // Reference to the TextMeshProUGUI component
 
-    void Start()
+    private static ScoreDisplay instance;
+
+    void Awake()
     {
-        // Get the TextMeshProUGUI component
+        instance = this;
         scoreText = GetComponent<TextMeshProUGUI>();
     }
 
-    void Update()
+    public static void UpdateScore(int score)
     {
         // Update the text to display the current score
-        scoreText.text = "Score: " + ScoreManager.score;
+        instance.scoreText.text = "Score: " + score;
     }
 }

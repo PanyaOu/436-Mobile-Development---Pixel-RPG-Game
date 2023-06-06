@@ -15145,7 +15145,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1176889906}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.73, y: 1.66, z: 0}
+  m_LocalPosition: {x: 19.9, y: 4.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15310,7 +15310,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1515370406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.63, y: 1.58, z: 0}
+  m_LocalPosition: {x: -11.27, y: 4.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15484,6 +15484,7 @@ GameObject:
   - component: {fileID: 1668225444}
   - component: {fileID: 1668225446}
   - component: {fileID: 1668225445}
+  - component: {fileID: 1668225447}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -15508,7 +15509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 746.9778, y: 452.2837}
+  m_AnchoredPosition: {x: 803, y: 485}
   m_SizeDelta: {x: 200, y: 68.1551}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1668225445
@@ -15594,7 +15595,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -2.46492, w: 0}
+  m_margin: {x: 0, y: 0, z: -2.46492, w: 16.887526}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -15608,6 +15609,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668225443}
   m_CullTransparentMesh: 1
+--- !u!114 &1668225447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668225443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a761026a754aa324eb5204e7767ad271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 1668225445}
 --- !u!1 &1819774965
 GameObject:
   m_ObjectHideFlags: 0

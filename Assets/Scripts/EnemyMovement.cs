@@ -29,6 +29,4 @@ public class EnemyMovement : MonoBehaviour
         rb.AddForce(direction * speed);
     }
 
-
-
 }
